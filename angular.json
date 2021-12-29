@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "projects": {
+    "i-ching-generator": {
+      "projectType": "application",
+      "root": "apps/i-ching-generator",
+      "sourceRoot": "apps/i-ching-generator/src",
+      "prefix": "i-ching",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/i-ching-generator",
+            "index": "apps/i-ching-generator/src/index.html",
+            "main": "apps/i-ching-generator/src/main.ts",
+            "polyfills": "apps/i-ching-generator/src/polyfills.ts",
+            "tsConfig": "apps/i-ching-generator/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/i-ching-generator/src/favicon.ico",
+              "apps/i-ching-generator/src/assets"
+            ],
+            "styles": ["apps/i-ching-generator/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/i-ching-generator/src/environments/environment.ts",
+                  "with": "apps/i-ching-generator/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "i-ching-generator:build:production"
+            },
+            "development": {
+              "browserTarget": "i-ching-generator:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "i-ching-generator:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/i-ching-generator/src/**/*.ts",
+              "apps/i-ching-generator/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/i-ching-generator"],
+          "options": {
+            "jestConfig": "apps/i-ching-generator/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "i-ching-generator-e2e": {
+      "root": "apps/i-ching-generator-e2e",
+      "sourceRoot": "apps/i-ching-generator-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/i-ching-generator-e2e/cypress.json",
+            "devServerTarget": "i-ching-generator:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "i-ching-generator:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/i-ching-generator-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["i-ching-generator"]
+    }
+  }
+}
