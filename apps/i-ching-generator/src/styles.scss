@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+$ying: #110C12;
+$yang: #F2F4F3;
+body{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $ying;
+  color: $yang;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+h1{
+  color: $yang;
+  text-transform: uppercase;
+}
