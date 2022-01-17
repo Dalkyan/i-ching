@@ -17,3 +17,11 @@ h1{
   color: $yang;
   text-transform: uppercase;
 }
+.svg-wrapper {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+  padding-top: 50%;
+}

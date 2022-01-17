@@ -1,11 +1,20 @@
 <h1>I-ching generator</h1>
-<button id="hmr">
-  <svg>
-    <rect x="50" width="200" height="20" style="fill: #110C12"></rect>
-    <rect x="50" y="30" width="200" height="20" style="fill: #110C12"></rect>
-    <rect x="50" y="60" width="200" height="20" style="fill: #110C12"></rect>
-    <rect x="50" y="90" width="200" height="20" style="fill: #110C12"></rect>
-    <rect x="50" y="120" width="200" height="20" style="fill: #110C12"></rect>
-    <rect x="50" y="150" width="200" height="20" style="fill: #110C12"></rect>
+  <div class="svg-wrapper">
+  <svg viewBox="0 0 200 200">
+    <g class="hexagram-group">
+    <circle cx="50%" cy="50%" r="50%" style="fill: #F2F4F3;"> </circle>
+      <g class="bars">
+      <rect id="bar6" x="25" y="45" width="150" height="10" style="fill: #110C12"></rect>
+      <rect id="bar5" x="25" y="65" width="150" height="10" style="fill: #110C12"></rect>
+      <rect id="bar4" x="25" y="85" width="150" height="10" style="fill: #110C12"></rect>
+      <rect id="bar3" x="25" y="105" width="150" height="10" style="fill: #110C12"></rect>
+      <rect id="bar2" x="25" y="125" width="150" height="10" style="fill: #110C12"></rect>
+      <rect *ngIf="false" id="bar1" x="25" y="145" width="150" height="10" style="fill: #110C12"></rect>
+     <g *ngIf="true" id="yin1">
+      <rect id="bar1" x="25" y="145" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="145" width="70" height="10" style="fill: #110C12"></rect>
+     </g>
+      </g>
+    </g>
   </svg>
-</button>
+</div>
+
