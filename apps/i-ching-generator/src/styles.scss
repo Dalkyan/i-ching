@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: go3;
+  src: url(assets/go3v2.ttf) format("truetype");
+}
 $ying: #110C12;
 $yang: #F2F4F3;
 body{
-  display: flex;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,16 +15,16 @@ body{
   align-content: center;
   justify-content: center;
   text-align: center;
+  font-family: go3;
+  letter-spacing: 0.5em;
 }
 h1{
   color: $yang;
   text-transform: uppercase;
+  font-size: 3rem;
 }
 .svg-wrapper {
-	display: inline-block;
-	position: relative;
 	width: 100%;
 	vertical-align: middle;
 	overflow: hidden;
-  padding-top: 50%;
 }

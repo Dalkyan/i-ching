@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  changeBar: boolean[];
+  constructor() {
+    this.changeBar = [true, true, true , true, true, true];
   }
 
+ngOnInit(): void {
+  // for (let i = 0; i < 6; i++) {
+  //   this.changeBar[i] = true;
+  //   }
+}
 }
