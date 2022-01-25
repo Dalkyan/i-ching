@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/i-ching-generator",
             "index": "apps/i-ching-generator/src/index.html",
@@ -21,7 +23,9 @@
               "apps/i-ching-generator/src/favicon.ico",
               "apps/i-ching-generator/src/assets"
             ],
-            "styles": ["apps/i-ching-generator/src/styles.scss"],
+            "styles": [
+              "apps/i-ching-generator/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,10 +90,22 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/i-ching-generator"],
+          "outputs": [
+            "coverage/apps/i-ching-generator"
+          ],
           "options": {
             "jestConfig": "apps/i-ching-generator/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "i-ching-generator:build:production",
+            "firebaseProject": "i-ching-generator",
+            "firebaseHostingSite": "i-ching-generator"
           }
         }
       },
@@ -114,14 +130,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/i-ching-generator-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/i-ching-generator-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["i-ching-generator"]
+      "implicitDependencies": [
+        "i-ching-generator"
+      ]
     }
   }
 }

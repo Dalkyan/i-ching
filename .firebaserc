@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "i-ching-generator": {
+      "hosting": {
+        "i-ching-generator": [
+          "i-ching-generator"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "i-ching-generator"
+  }
+}

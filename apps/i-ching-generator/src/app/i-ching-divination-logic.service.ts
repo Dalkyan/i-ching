@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class IChingDivinationLogicService {
 
-  constructor() { }
 
  public getYinYangValue():number {
 
