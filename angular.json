@@ -102,7 +102,6 @@
           "builder": "@angular/fire:deploy",
           "options": {
             "prerender": false,
-            "ssr": false,
             "browserTarget": "i-ching-generator:build:production",
             "firebaseProject": "i-ching-generator",
             "firebaseHostingSite": "i-ching-generator"
