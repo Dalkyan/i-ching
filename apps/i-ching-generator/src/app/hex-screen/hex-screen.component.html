@@ -1,7 +1,14 @@
 <div class="svg-wrapper">
   <svg viewBox="0 0 200 200">
     <g class="hexagram-group">
-      <circle cx="50%" cy="50%" r="50%" style="fill: #F2F4F3;"> </circle>
+    <circle cx="50%" cy="50%" r="50%" style="fill: #F2F4F3;"> </circle>
+    <g *ngFor="let bar of bars">
+      <rect *ngIf="!bar.isBroken" x="25" [attr.y]="bar.yPosition" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="bar.isBroken">
+        <rect id="bar1" x="25" [attr.y]="bar.yPosition" width="70" height="10" style="fill: #110C12"></rect><rect x="105" [attr.y]="bar.yPosition" width="70" height="10" style="fill: #110C12"></rect>
+        </g>
+
+    </g>
     </g>
   </svg>
 </div>

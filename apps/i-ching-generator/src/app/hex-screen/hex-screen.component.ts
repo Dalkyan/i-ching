@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Bar } from '../bar';
 import { IChingDivinationLogicService } from '../i-ching-divination-logic.service';
 
 
@@ -9,9 +10,21 @@ import { IChingDivinationLogicService } from '../i-ching-divination-logic.servic
 })
 export class HexScreenComponent implements OnInit {
 
-  constructor(private logic:IChingDivinationLogicService) { }
+  bars : Bar[] ;
+
+  constructor(private logic:IChingDivinationLogicService) {
+    this.bars = new Array<Bar>(6);
+  }
+
+
 
   ngOnInit(): void {
+
+    for (let i = 0; i < this.bars.length; i++) {
+      const yinYangValue = this.logic.getYinYangValue();
+      this.bars[i] = new Bar(yinYangValue > 2, yinYangValue % 2 == 0, i)
+    }
+
   }
 
   getBarValue
