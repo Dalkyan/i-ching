@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="300"
+   viewBox="-5 -5 110.0 110.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="yin-yang.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs824" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="stroke:#9a031e;fill-opacity:1;fill:#F2F4F3;stroke-opacity:1"
+       id="path1920"
+       cx="50"
+       cy="50"
+       r="50" />
+    <path
+       id="path1320"
+       style="stroke:none;fill-opacity:1;fill:#110C12;"
+       d="M 50 0 A 25 25 0 0 0 25 25 A 25 25 0 0 0 50 50 A 25 25 0 0 1 75 75 A 25 25 0 0 1 50 100 A 50 50 0 0 0 100 50 A 50 50 0 0 0 50 0 z " />
+    <circle
+       style="stroke:none;fill-opacity:1;fill:#F2F4F3;"
+       id="path1944"
+       cx="50"
+       cy="25"
+       r="5" />
+    <circle
+       style="stroke:none;fill-opacity:1;fill:#110C12;"
+       id="path1944-3"
+       cx="50"
+       cy="75"
+       r="5" />
+  </g>
+</svg>
