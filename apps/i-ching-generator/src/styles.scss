@@ -3,14 +3,14 @@
   font-family: go3;
   src: url(assets/go3v2.ttf) format("truetype");
 }
-$ying: #110C12;
+$yin: #110C12;
 $yang: #F2F4F3;
 $red: #9a031e;
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: $ying;
+  background-color: $yin;
   color: $yang;
   align-items: center;
   align-content: center;
@@ -18,14 +18,35 @@ body{
   text-align: center;
   font-family: go3;
   letter-spacing: 0.5em;
+  text-shadow: 0.1em 0.1em $red;
 }
+button{
+  min-width: 10vw;
+  font-family: go3;
+  text-shadow: 0.1em 0.1em $red;
+  color: $yang;
+  background-color: $yin;
+  padding: 0.5em;
+  // box-shadow: $red;
+  border: 0.1em outset $red;
+  &:hover{
+    // background-color: $red;
+    border-style: inset;
+  }
+}
+
 h1{
   color: $yang;
   text-transform: uppercase;
   font-size: 3rem;
 }
 .svg-wrapper {
-	width: 100%;
-	vertical-align: middle;
+	width: 40vh;
+  padding: 1vh;
 	overflow: hidden;
+  max-width: 40vw;
+  margin: auto;
+@media screen and (max-width: 400px) {
+max-width: 40vh;
+}
 }

@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-screen.component.scss']
 })
 export class HomeScreenComponent {
-
-  changeBar: boolean[];
-  constructor() {
-    this.changeBar = [true, true, true , true, true, true];
-  }
-
+  
 }

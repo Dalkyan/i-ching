@@ -1,0 +1,33 @@
+<div class="svg-wrapper">
+<svg viewBox="0 0 200 200">
+    <g class="hexagram-group">
+    <circle cx="50%" cy="50%" r="50%" style="fill: #F2F4F3;"> </circle>
+      <g class="bars">
+      <rect *ngIf="changeBar[5]" (click)="changeBar[5]=!changeBar[5]" id="bar5" x="25" y="45" width="150" height="10" style="fill: #110C12"/>
+        <g *ngIf="!changeBar[5]" (click)="changeBar[5]=!changeBar[5]" id="broken5">
+        <rect id="bar1" x="25" y="45" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="45" width="70" height="10" style="fill: #110C12"></rect>2
+        </g>
+      <rect *ngIf="changeBar[4]" (click)="changeBar[4]=!changeBar[4]"  id="bar4" x="25" y="65" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="!changeBar[4]" (click)="changeBar[4]=!changeBar[4]" id="broken4">
+        <rect id="bar1" x="25" y="65" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="65" width="70" height="10" style="fill: #110C12"></rect>2
+        </g>
+      <rect *ngIf="changeBar[3]" (click)="changeBar[3]=!changeBar[3]" id="bar3" x="25" y="85" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="!changeBar[3]" (click)="changeBar[3]=!changeBar[3]" id="broken3">
+        <rect id="bar1" x="25" y="85" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="85" width="70" height="10" style="fill: #110C12"></rect>2
+        </g>
+      <rect *ngIf="changeBar[2]" (click)="changeBar[2]=!changeBar[2]" id="bar2" x="25" y="105" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="!changeBar[2]" (click)="changeBar[2]=!changeBar[2]" id="broken2">
+        <rect id="bar1" x="25" y="105" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="105" width="70" height="10" style="fill: #110C12"></rect>2
+        </g>
+      <rect *ngIf="changeBar[1]" (click)="changeBar[1]=!changeBar[1]" id="bar1" x="25" y="125" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="!changeBar[1]" (click)="changeBar[1]=!changeBar[1]" id="broken1">
+        <rect id="bar1" x="25" y="125" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="125" width="70" height="10" style="fill: #110C12"></rect>2
+        </g>
+      <rect *ngIf="changeBar[0]" (click)="changeBar[0]=!changeBar[0]" id="bar0" x="25" y="145" width="150" height="10" style="fill: #110C12"></rect>
+        <g *ngIf="!changeBar[0]" (click)="changeBar[0]=!changeBar[0]" id="broken0">
+        <rect id="bar1" x="25" y="145" width="70" height="10" style="fill: #110C12"></rect><rect x="105" y="145" width="70" height="10" style="fill: #110C12"></rect>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
